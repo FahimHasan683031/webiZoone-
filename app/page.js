@@ -5,7 +5,7 @@ import { error } from "console";
 export default function Home() {
 
   return (
-    <main className="relative">
+    <main className="">
       <Link className="my-10 text-center p-2 bg-blue-600" href={"/helloworld"}>
         Hello World
       </Link>
