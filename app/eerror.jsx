@@ -4,6 +4,15 @@
 import { useEffect } from 'react'
 import ButtonComponent from './components/common/button/button'
 
+
+export const generateMetadata = async () => {
+    return {
+        title: "Error",
+        description: "Error page",
+    };
+};
+
+
 export default function Error({ error, reset }) {
     useEffect(() => {
         // Log the error to an error reporting service

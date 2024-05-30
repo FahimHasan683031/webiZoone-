@@ -13,6 +13,20 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    keyframes: {
+      expand: {
+        '0%': { clipPath: 'circle(0% at 90% 10%)' },
+        '100%': { clipPath: 'circle(150% at 90% 10%)' },
+      },
+      collapse: {
+        '0%': { clipPath: 'circle(150% at 90% 10%)' },
+        '100%': { clipPath: 'circle(0% at 90% 10%)' },
+      },
+    },
+    animation: {
+      expand: 'expand 1s forwards',
+      collapse: 'collapse 1s forwards',
+    },
   },
   plugins: [],
 };
