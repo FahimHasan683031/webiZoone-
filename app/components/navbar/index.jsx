@@ -146,13 +146,13 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="w-full min-h-screen my-auto text-2xl border grid grid-cols-2 gap-5">
-                    <div className=' mx-auto mt-20 flex '>
-                        <p className='w-20 h-10 text-lg -rotate-90 font-bold uppercase'>Menu</p>
+                <div className="w-full min-h-screen my-auto text-2xl border lg:grid lg:grid-cols-2 gap-5">
+                    <div className=' mx-auto mt-2 md:mt-20 flex '>
+                        <p className='w-20 h-10 text-sm md:text-lg -rotate-90 font-bold uppercase'>Menu</p>
                         <div>
                             {
                                 navItem?.map(item => (
-                                    <div key={item?.id} className='mb-4 text-5xl font-bold'>
+                                    <div key={item?.id} className='mb-2 md:mb-4 text-lg md:text-4xl lg:text-5xl font-bold'>
                                         <Link href={item?.link}>
                                             {item?.title}
                                         </Link>
@@ -163,7 +163,7 @@ const Navbar = () => {
                     </div>
                     <div className='my-auto mx-auto'>
 
-                        <div className='align-text-bottom'>
+                        <div className='p-5'>
                             <AnimatedButton text={"hello@gmail.com"} link={''} textColor={"text-orange-600"} />
 
                             <br />
