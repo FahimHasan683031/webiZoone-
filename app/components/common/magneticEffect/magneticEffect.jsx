@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 
 const MagneticEffect = ({ children }) => {
 
+    
     const magneticRef = useRef(null);
     useGSAP(() => {
 

@@ -88,7 +88,7 @@ const Navbar = () => {
 
   return (
     <nav className={`w-full fixed top-0 p-5 ${scrollPosition > 1000 ? 'bg-white text-black' : 'bg-transparent text-white'} duration-1000 z-50`}>
-      <div ref={navRef} className="flex items-center justify-between px-1 py-5">
+      <div ref={navRef} className="flex items-center justify-between md:px-20  py-5">
         <div className="text-lg font-bold">Logo</div>
         <div className="flex gap-10">
           <div>
@@ -110,7 +110,7 @@ const Navbar = () => {
       <div
         className={`fixed inset-0 bg-white flex flex-col items-end justify-start z-50  ${isOpen === 1 ? 'animate-expand' : isOpen === 0 ? 'animate-collapse' : 'hidden'} text-black`}
       >
-        <div className="w-full flex items-center justify-between px-1 py-5 mt-5">
+        <div className="w-full flex items-center justify-between md:px-20 py-5 mt-5">
           <div className="black text-lg font-bold ml-10">Logo</div>
           <div className="flex gap-10">
             <div>
