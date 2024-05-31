@@ -147,7 +147,7 @@ const Navbar = () => {
                   <div
                     key={item.id}
                     id={`nav-item-${index}`}
-                    className={`nav-item group  text-lg md:text-4xl lg:text-5xl font-bold relative transition-colors duration-1000 ${hoveredIndex === index ? ' text-black' : 'duration-100 text-gray-200'}`}
+                    className={`nav-item group  text-base md:text-4xl lg:text-5xl font-bold relative transition-colors duration-1000 ${hoveredIndex === index ? ' text-black' : 'duration-100 text-gray-200'}`}
                   >
 
 
@@ -160,7 +160,7 @@ const Navbar = () => {
                       <span
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(-1)} // Reset hoveredIndex to -1 when mouse leaves
-                        className={`py-2 inline-block transition-transform duration-1000 ${hoveredIndex === -1 && 'transition-colors duration-1000 text-black'}  ${hoveredIndex === index && `translate-x-5 transition-colors duration-1000 text-black`}`}
+                        className={` py-2 inline-block transition-transform duration-1000 ${hoveredIndex === -1 && 'transition-colors duration-1000 text-black'}  ${hoveredIndex === index && `translate-x-5 transition-colors duration-1000 text-black`}`}
                       >
                         {item.title}
                       </span>
