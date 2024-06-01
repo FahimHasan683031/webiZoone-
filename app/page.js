@@ -1,7 +1,10 @@
 "use client";
 
 import BannerComponent from "./components/banner/banner";
+import ClientReview from "./components/clientReview/ClientReview";
+import Newsletter from "./components/newsletter/Newsletter";
 import Services from "./components/services";
+import WorkingProcess from "./components/workingProcess/WorkingProcess";
 import FeaturedWorks from "./components/featuredWorks/FeaturedWorks";
 import About from "./components/about/About";
 
@@ -11,6 +14,9 @@ export default function Home() {
     <main className="">
       <BannerComponent />
       <Services />
+      <Newsletter />
+      <ClientReview />
+      <WorkingProcess />
       <FeaturedWorks/>
       <About/>
     </main>
