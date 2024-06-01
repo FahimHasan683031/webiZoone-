@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import AnimatedBox from "../common/animationBox/animationBox";
 const SvgAnimation = () => {
     const boxRef2 = useRef(null);
 
@@ -62,18 +63,28 @@ const SvgAnimation = () => {
     }, [animationCompleted]);
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <svg height="1030" width="1030" className="absolute hidden md:block w-2/3 lg:left-1/3 b">
-                <circle
-                    cx="615"
-                    cy="515"
-                    r="400"
-                    stroke="#9c9c9c"
-                    stroke-width="1"
-                    stroke-dasharray="3236 3236"
-                    fill="none"
-                    stroke-dashoffset="0"
-                ></circle>
-            </svg>
+
+            <AnimatedBox
+                initialPosition="0%"
+                finalPosition="100%"
+                duration={2}
+                delay={1}
+                position="x"
+            >
+
+                <svg height="1030" width="1030" className="absolute hidden md:block w-2/3 lg:left-1/3 b">
+                    <circle
+                        cx="615"
+                        cy="515"
+                        r="400"
+                        stroke="#9c9c9c"
+                        stroke-width="1"
+                        stroke-dasharray="3236 3236"
+                        fill="none"
+                        stroke-dashoffset="0"
+                    ></circle>
+                </svg>
+            </AnimatedBox>
             <section className="absolute w-1/3 lg:w-96  right-0   lg:left-[60%]  overflow-hidden ">
                 <section className="" ref={boxRef2}>
                     <div className="">

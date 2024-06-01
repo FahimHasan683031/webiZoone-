@@ -21,10 +21,10 @@ const NotFound = () => {
                 <p className='text-white text-9xl my-10 md:my-0 md:text-[200px] font-extrabold'>404</p>
                 <ButtonComponent text={"Back Home"} />
             </div>
-            <div class=" text-gray-400 lg:my-auto text-center md:text-2xl mt-20 ">
-               <p>We couldn't find the page you're looking for.</p>
+            <div className=" text-gray-400 lg:my-auto text-center md:text-2xl mt-20 ">
+                <p>We couldn't find the page you're looking for.</p>
             </div>
-            
+
         </div>
     );
 };

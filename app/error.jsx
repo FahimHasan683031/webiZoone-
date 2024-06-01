@@ -26,7 +26,7 @@ export default function Error({ error, reset }) {
                 <p className='text-white text-9xl my-10 md:my-0 md:text-[200px] font-extrabold'>Error</p>
                 <ButtonComponent text={"Back Home"} />
             </div>
-            <div class=" text-gray-400 lg:my-auto text-center md:text-2xl mt-20 ">
+            <div className=" text-gray-400 lg:my-auto text-center md:text-2xl mt-20 ">
                 <p>We are extremely sorry for this error.</p>
             </div>
 
