@@ -45,7 +45,6 @@ const Services = () => {
     <div className="py-20 px-5" style={{ scrollBehavior: "smooth" }}>
       <div>
         <div className="spacer"></div>
-        <div className="accordions">
           <div className="accordion">
             <div className="content-box">
               <img
@@ -55,6 +54,7 @@ const Services = () => {
               />
             </div>
           </div>
+        <div className="accordions">
           <div className="accordion">
             <div className="content-box">
               <img
