@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="">
       <BannerComponent />
-      {/* <Services /> */}
+      <Services />
       <Newsletter />
       <ClientReview />
       <WorkingProcess />
