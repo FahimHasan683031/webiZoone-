@@ -31,7 +31,7 @@ const About = () => {
     }, [animationCompleted]);
 
     return (
-        <div className="min-h-screen w-screen relative flex flex-col justify-center items-center lg:p-5 xl:p-0">
+        <div className="min-h-screen  relative flex flex-col justify-center items-center lg:p-5 xl:p-0">
             <div
                 ref={boxRef}
                 className="animated-box absolute top-0 left-0 w-full min-h-screen bg-[#F84525] z-0"
@@ -74,7 +74,7 @@ const About = () => {
                         delay={0}
                         position="x"
                     >
-                        <h2 className="md:text-4xl text-2xl font-bold lg:leading-loose leading-relaxed">
+                        <h2 className="md:text-4xl text-2xl font-bold lg:leading-loose leading-relaxed tracking-wide">
                             We are a web design and development company, building websites that drive traffic, engagement, and conversion for industry-leading brands and startups in Silicon Valley. 
                         </h2>
                     </ScrollAnimation>
