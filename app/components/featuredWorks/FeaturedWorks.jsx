@@ -53,7 +53,7 @@ const FeaturedWorks = () => {
                 </ScrollAnimation>
             </div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-y-36 gap-y-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-36 md:gap-y-20 gap-y-12'>
                 {projects.map((project, index) => (
                     <SingleWork
                         key={index}

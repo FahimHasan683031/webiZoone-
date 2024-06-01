@@ -68,16 +68,16 @@ const SingleWork = ({ project, index }) => {
                     />
                 </div>
 
-                <div className='absolute bottom-16 -right-5 text-right'>
-                    <div className='w-fit overflow-hidden'>
+                <div className='absolute bottom-6 md:bottom-12 md:-right-5 md:text-right text-center w-full'>
+                    <div className=' overflow-hidden'>
                         <ScrollAnimation
                             initialPosition="100%"
                             finalPosition="0%"
                             duration={1}
                             delay={0.5}
                             position="y">
-                            <h2 className='text-3xl font-bold'>{project?.title}</h2>
-                            <p className='mt-2 text-lg'>{project?.description}</p>
+                            <h2 className='text-3xl font-bold md:tracking-wider tracking-wide'>{project?.title}</h2>
+                            <p className='mt-2 text-lg tracking-wide'>{project?.description}</p>
                         </ScrollAnimation>
                     </div>
                 </div>
