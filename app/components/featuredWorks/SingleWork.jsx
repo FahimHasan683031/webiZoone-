@@ -1,0 +1,89 @@
+import Image from 'next/image';
+import React, { useRef, useState } from 'react';
+import ScrollAnimation from '../common/scrollAnimation/ScrollAnimation';
+import { gsap } from 'gsap';
+import { Power3 } from 'gsap/gsap-core';
+
+const SingleWork = ({ project, index }) => {
+    const containerRef = useRef();
+
+    const handleMouseEnter = () => {
+        const tl = gsap.timeline();
+        tl.to(containerRef.current, {
+            rotationY: -20,
+            rotateX: 4,
+            rotateY: -4,
+            duration: 0.5,
+            ease: Power3.easeOut
+        }).to(containerRef.current.querySelector('img'), {
+            scale: 1.08,
+            duration: 1,
+            delay: 0,
+            ease: Power3.easeOut
+        }, '<');
+
+        tl.play();
+    };
+
+    const handleMouseLeave = () => {
+        const tl = gsap.timeline();
+
+        tl.to(containerRef.current, {
+            rotationY: 0,
+            rotateX: 0,
+            rotateY: 0,
+            duration: 1,
+            delay: 0,
+            ease: Power3.easeOut
+        }).to(containerRef.current.querySelector('img'), {
+            scale: 1,
+            duration: 0.75,
+            ease: Power3.easeOut
+        }, '<');
+
+        tl.play();
+    };
+
+    return (
+        <div className={`relative w-fit ${index % 2 !== 0 ? "-mt-20" : ""}`}>
+            <ScrollAnimation
+                initialPosition="40%"
+                finalPosition="0%"
+                duration={1}
+                delay={0}
+                position="y"
+            >
+                <div
+                    ref={containerRef}
+                    onMouseEnter={() => handleMouseEnter()}
+                    onMouseLeave={() => handleMouseLeave()}
+                    className='w-fit overflow-hidden'>
+                    <Image
+                        src={project?.image}
+                        alt={project?.title}
+                        width={500}
+                        height={700}
+                        className={`w-[560px] h-[750px] duration-500 transition-all hover:scale-105`}
+                    />
+                </div>
+
+                <div className='absolute bottom-16 -right-5 text-right'>
+                    <div className='w-fit overflow-hidden'>
+                        <ScrollAnimation
+                            initialPosition="100%"
+                            finalPosition="0%"
+                            duration={1}
+                            delay={0.5}
+                            position="y">
+                            <h2 className='text-3xl font-bold'>{project?.title}</h2>
+                            <p className='mt-2 text-lg'>{project?.description}</p>
+                        </ScrollAnimation>
+                    </div>
+                </div>
+
+            </ScrollAnimation>
+        </div>
+    );
+};
+
+export default SingleWork;
