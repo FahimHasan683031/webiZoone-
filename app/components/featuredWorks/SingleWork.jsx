@@ -45,12 +45,13 @@ const SingleWork = ({ project, index }) => {
     };
 
     return (
-        <div className={`relative w-fit ${index % 2 !== 0 ? "-mt-20" : ""}`}>
+        <div className={`relative w-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>
             <ScrollAnimation
-                initialPosition="40%"
-                finalPosition="0%"
+                initialPosition="30%"
+                finalPosition= "0%"
                 duration={1}
                 delay={0}
+                containerRef={containerRef}
                 position="y"
             >
                 <div
@@ -63,7 +64,7 @@ const SingleWork = ({ project, index }) => {
                         alt={project?.title}
                         width={500}
                         height={700}
-                        className={`w-[560px] h-[750px] duration-500 transition-all hover:scale-105`}
+                        className={`md:w-[560px] w-[400px] md:h-[750px] h-[535px] duration-500 transition-all hover:scale-105`}
                     />
                 </div>
 
