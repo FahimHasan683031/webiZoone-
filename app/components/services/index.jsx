@@ -1,95 +1,73 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import "./services.css";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Services = () => {
+export default function Services() {
+  const images = [
+    "https://images.playground.com/0d7b373283584cb3a62cd0210f05e17e.jpeg",
+    "https://images.playground.com/a86eff58fa3e44888953ebef18302990.jpeg",
+    "https://images.playground.com/3caaf388126d4472964a076710a1c858.jpeg",
+    "https://images.playground.com/454a16f2a82d4cf4afedff31b14474d6.jpeg",
+    "https://images.playground.com/2844a34df511473593393535db7179ca.jpeg",
+  ];
+
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".accordions",
-        pin: true,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        ease: "linear",
-      },
-      onComplete: () => {
-        gsap.to(".new-section", { opacity: 1, duration: 1 });
-      },
-    });
+    let getRatio = (el) =>
+      window.innerHeight / (window.innerHeight + el.offsetHeight);
 
-    tl.to(".accordion .content-box", {
-      height: 0,
-      paddingBottom: 0,
-      opacity: 0,
-      stagger: 0.5,
-    });
-    tl.to(".accordion", {
-      marginBottom: 15,
-      stagger: 0.5,
-    });
+    gsap.utils.toArray(".parallax-section").forEach((section, i) => {
+      const bg = section.querySelector(".bg");
+      bg.style.backgroundImage = `url(${images[i]})`;
 
-    // Cleanup on unmount
-    return () => {
-      ScrollTrigger.getAll().forEach((instance) => instance.kill());
-    };
-  }, []);
+      gsap.fromTo(
+        bg,
+        {
+          backgroundPosition: () =>
+            i
+              ? `50% ${-window.innerHeight * getRatio(section)}px`
+              : "50% 0px",
+        },
+        {
+          backgroundPosition: () =>
+            `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: () => (i ? "top bottom" : "top top"),
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        }
+      );
+    });
+  }, [images]);
+
+  const sections = [
+    "Simple parallax sections",
+    "Hey look, a title",
+    "They just keep coming",
+    "So smooth though",
+    "Nice, right?",
+  ];
 
   return (
-    <div className="py-20 px-5" style={{ scrollBehavior: "smooth" }}>
-      <div>
-        <div className="spacer"></div>
-        <div className="accordions">
-          <div className="accordion">
-            <div className="content-box">
-              <img
-                className="w-full rounded-md"
-                src="https://images.playground.com/1fc3f41321964c80bb4e572ed59349bd.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="accordion">
-            <div className="content-box">
-              <img
-                className="w-full rounded-md"
-                src="https://images.playground.com/bb2c81b678164565b2f2160e8b298534.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="accordion">
-            <div className="content-box">
-              <img
-                className="w-full rounded-md"
-                src="https://images.playground.com/4cdc53828e704ff483c35172f9305e94.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="accordion">
-            <div className="content-box">
-              <img
-                className="w-full rounded-md"
-                src="https://images.playground.com/80a692c7db304642af03a6f6cf21c9f8.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div className="new-section" style={{ opacity: 0 }}>
-          <h2>New Section</h2>
-          <p>This section appears after the animation completes.</p>
-        </div>
-      </div>
-    </div>
+    <>
+      {sections.map((text, index) => (
+        <section
+          key={index}
+          className="parallax-section relative h-screen flex items-center justify-center"
+        >
+          <div className="bg absolute top-0 left-0 w-full h-full z-[-1] bg-cover bg-center bg-no-repeat"></div>
+          <h1 className="text-white text-center text-4xl md:text-6xl font-light shadow-lg">
+            {text}
+          </h1>
+        </section>
+      ))}
+    </>
   );
-};
-
-export default Services;
+}
