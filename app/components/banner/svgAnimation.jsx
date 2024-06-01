@@ -78,10 +78,10 @@ const SvgAnimation = () => {
                         cy="515"
                         r="400"
                         stroke="#9c9c9c"
-                        stroke-width="1"
-                        stroke-dasharray="3236 3236"
+                        strokeWidth="1"
+                        strokeDasharray="3236 3236"
                         fill="none"
-                        stroke-dashoffset="0"
+                        strokeDashoffset="0"
                     ></circle>
                 </svg>
             </AnimatedBox>
