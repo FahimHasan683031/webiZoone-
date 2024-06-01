@@ -37,7 +37,7 @@ const BannerComponent = () => {
             <SvgAnimation />
 
 
-            <div className="absolute top-36  left-0 min-h-screen  z-0 text-white">
+            <div className="absolute top-36  left-0 min-h-screen  z-0 text-gray-400">
                 <div className="w-full mt-20 md:mt-40 pl-5 md:pl-10 lg:pl-60  p-2">
 
                     <div className=" mb-10 overflow-hidden">
@@ -125,7 +125,8 @@ const BannerComponent = () => {
                 </div>
             </div>
 
-            <div className="absolute text-white bottom-40 -right-10 md:right-10 flex gap-5 rotate-90 ">
+
+            <div className="fixed text-gray-400 bottom-40 -right-10 md:right-10 flex gap-5 rotate-90 ">
                 <p className="border-b w-20 my-auto animate-expand"></p>
                 <p className="uppercase"> Scroll</p>
             </div>
