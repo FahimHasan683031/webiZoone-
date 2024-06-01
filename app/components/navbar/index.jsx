@@ -87,7 +87,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`w-full fixed top-0 p-5 ${scrollPosition > 1000 ? 'bg-white text-black' : 'bg-transparent text-white'} duration-1000 z-50`}>
+    <nav className={`w-full p-5 ${scrollPosition > 1000 ? 'bg-white text-black' : 'bg-transparent text-white'} duration-1000 z-50`}>
       <div ref={navRef} className="flex items-center justify-between md:px-20  py-5">
         <div className="text-lg font-bold">Logo</div>
         <div className="flex gap-10">
