@@ -14,11 +14,12 @@ export default function Home() {
     <main className="">
       <BannerComponent />
       <Services />
+      <FeaturedWorks/>
+      <About/>
       <Newsletter />
       <ClientReview />
       <WorkingProcess />
-      <FeaturedWorks/>
-      <About/>
+      
     </main>
   );
 }
