@@ -51,7 +51,7 @@ const ClientReview = () => {
               CEO at{" "}
               <span className="text-lg font-medium text-slate-900">podium</span>
             </h3>
-            <p class="mb-6 text-gray-500 text-sm leading-7 ">
+            <p className="mb-6 text-gray-500 text-sm leading-7 ">
               This is a section of some simple filler text, also known as
               placeholder text. It shares some characteristics of a real written
             </p>
@@ -64,7 +64,7 @@ const ClientReview = () => {
               CEO at{" "}
               <span className="text-lg font-medium text-slate-900">podium</span>
             </h3>
-            <p class="mb-6 text-gray-500 text-sm leading-7 ">
+            <p className="mb-6 text-gray-500 text-sm leading-7 ">
               This is a section of some simple filler text, also known as
               placeholder text. It shares some characteristics of a real written
             </p>
@@ -77,7 +77,7 @@ const ClientReview = () => {
               CEO at{" "}
               <span className="text-lg font-medium text-slate-900">podium</span>
             </h3>
-            <p class="mb-6 text-gray-500 text-sm leading-7 ">
+            <p className="mb-6 text-gray-500 text-sm leading-7 ">
               This is a section of some simple filler text, also known as
               placeholder text. It shares some characteristics of a real written
             </p>
