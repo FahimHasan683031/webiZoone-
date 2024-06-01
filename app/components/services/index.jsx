@@ -27,9 +27,7 @@ export default function Services() {
         bg,
         {
           backgroundPosition: () =>
-            i
-              ? `50% ${-window.innerHeight * getRatio(section)}px`
-              : "50% 0px",
+            i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px",
         },
         {
           backgroundPosition: () =>
@@ -57,17 +55,19 @@ export default function Services() {
 
   return (
     <>
-      {sections.map((text, index) => (
-        <section
-          key={index}
-          className="parallax-section relative h-screen flex items-center justify-center"
-        >
-          <div className="bg absolute top-0 left-0 w-full h-full z-[-1] bg-cover bg-center bg-no-repeat"></div>
-          <h1 className="text-white text-center text-4xl md:text-6xl font-light shadow-lg">
-            {text}
-          </h1>
-        </section>
-      ))}
+      <div className=" min-h-screen mt-44">
+        {sections.map((text, index) => (
+          <section
+            key={index}
+            className="parallax-section relative h-screen flex items-center justify-center"
+          >
+            <div className="bg absolute top-0 left-0 w-full h-full z-[-1] bg-cover bg-center bg-no-repeat"></div>
+            <h1 className="text-white text-center text-4xl md:text-6xl font-light shadow-lg">
+              {text}
+            </h1>
+          </section>
+        ))}
+      </div>
     </>
   );
 }
