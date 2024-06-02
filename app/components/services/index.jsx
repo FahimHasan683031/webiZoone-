@@ -1,75 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @next/next/no-img-element */
-"use client";
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
+import SystemDesign from "../../../public/feature_1.webp";
+import DesignDev from "../../../public/feature_2.webp";
+import Backend from "../../../public/feature_3.webp";
+import Image from "next/image";
 import ScrollAnimation from "../common/scrollAnimation/ScrollAnimation";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Services() {
-  const images = [
-    "https://images.playground.com/0d7b373283584cb3a62cd0210f05e17e.jpeg",
-    "https://images.playground.com/a86eff58fa3e44888953ebef18302990.jpeg",
-    "https://images.playground.com/3caaf388126d4472964a076710a1c858.jpeg",
-    "https://images.playground.com/454a16f2a82d4cf4afedff31b14474d6.jpeg",
-    "https://images.playground.com/2844a34df511473593393535db7179ca.jpeg",
-    "https://images.playground.com/0d7b373283584cb3a62cd0210f05e17e.jpeg",
-    "https://images.playground.com/a86eff58fa3e44888953ebef18302990.jpeg",
-    "https://images.playground.com/3caaf388126d4472964a076710a1c858.jpeg",
-    "https://images.playground.com/454a16f2a82d4cf4afedff31b14474d6.jpeg",
-    "https://images.playground.com/2844a34df511473593393535db7179ca.jpeg",
-    "https://images.playground.com/2844a34df511473593393535db7179ca.jpeg",
-  ];
-
-  useEffect(() => {
-    let getRatio = (el) =>
-      window.innerHeight / (window.innerHeight + el.offsetHeight);
-
-    gsap.utils.toArray(".parallax-section").forEach((section, i) => {
-      const bg = section.querySelector(".bg");
-      bg.style.backgroundImage = `url(${images[i]})`;
-
-      gsap.fromTo(
-        bg,
-        {
-          backgroundPosition: () =>
-            i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px",
-        },
-        {
-          backgroundPosition: () =>
-            `50% ${window.innerHeight * (1 - getRatio(section))}px`,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: () => (i ? "top bottom" : "top top"),
-            end: "bottom top",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        }
-      );
-    });
-  }, [images]);
-
-  const sections = [
-    { title: "E-Commerce", tags: ["UX, research", "MVP for startups", "UX, research", "MVP for startups", "UX, research", "MVP for startups",] },
-    { title: "Business Website", tags: [] },
-    { title: "Social Networks", tags: [] },
-    { title: "Medical & healthcare", tags: [] },
-    { title: "Forum Website", tags: [] },
-    { title: "Portal Website", tags: [] },
-    { title: "Membership Website", tags: [] },
-    { title: "Entertainment", tags: [] },
-    { title: "News", tags: [] },
-    { title: "blog", tags: [] },
-    { title: "Government Website", tags: [] },
-  ];
-
   return (
-    <>
-      {/* Title */}
+    <div className="">
       <div className="mb-16 overflow-hidden mt-56 max-w-screen-xl lg:px-5 xl:px-0 mx-auto">
         <ScrollAnimation
           initialPosition="100%"
@@ -91,33 +30,156 @@ export default function Services() {
           </div>
         </ScrollAnimation>
       </div>
-      <div>
-        {sections.map((text, index) => (
-          <section
-            key={index}
-            className="parallax-section relative h-screen flex items-center justify-start"
-          >
-            <div className="bg absolute top-0 left-0 w-full h-full z-[-1] bg-cover bg-center bg-no-repeat"></div>
-            <div className=" flex items-start justify-start flex-col px-44">
-              <h4 className=" font-semibold font-mono text-gray-200">
-                WHAT WE DO
-              </h4>
-              <h2 className=" text-3xl font-bold text-white py-5">
-                {text?.title}
+      <div className="flex flex-col gap-10 l">
+        {/* step 1 */}
+        <div
+          className="steps max-md:p-3 border border-[#252525] p-10 
+         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
+        >
+          {/* left side  */}
+          <div className="flex flex-col gap-5">
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
+              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
+                001 ///
+              </h1>
+              <h2 className="text-white font-extrabold text-xl">
+                System design & mindmapping
               </h2>
-              <div className=" flex items-center flex-wrap gap-4">
-                {text?.tags?.map((itm, index) => (
-                  <div key={index}>
-                    <button className=" border-none rounded-md shadow-md text-white bg-[tags] px-5 py-3">
-                      {itm}
-                    </button>
-                  </div>
-                ))}
-              </div>
             </div>
-          </section>
-        ))}
+            <article className="text-[#f5f1f1] font-light w-full ">
+              Designing for future scalability ensures that your product can
+              smoothly accommodate updates and new features while managing
+              database server costs efficiently. To achieve this, focus on
+              creating a modular architecture. By using a microservices
+              approach, you can update or add features independently, minimizing
+              disruptions. Containerization with tools like Docker ensures
+              consistent environments and makes it easy to scale services
+              horizontally.
+              <br />
+              <br />
+              Opt for cloud-based databases from providers like AWS, Google
+              Cloud, or Azure. These services offer automatic scaling, backups,
+              and maintenance, reducing the operational workload. Implement a
+              multi-tiered storage strategy: use high-performance storage for
+              frequently accessed data and cost-effective options for archival.
+              <br />
+              <br />
+              Serverless computing, such as AWS Lambda or Google Cloud
+              Functions, can significantly reduce costs by charging only for
+              actual compute time used, ideal for variable workloads. For
+              database costs, utilize the pay-as-you-go model to scale resources
+              according to demand, avoiding over-provisioning.
+              <br />
+              <br />
+              By designing a modular, containerized system with scalable
+              cloud-based solutions and a focus on cost-effective storage and
+              serverless computing, you ensure that your product can grow and
+              adapt efficiently, keeping costs under control.
+            </article>
+          </div>
+          {/* right side  */}
+          <div>
+            <Image
+              src={SystemDesign}
+              alt="SystemDesign"
+              className="h-[60%] w-[60%] m-auto  block max-md:w-full"
+            />
+          </div>
+        </div>
+        {/* step 2 */}
+        <div
+          className="steps max-md:p-3 border border-[#252525] p-10 
+         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
+        >
+          {/* left side  */}
+          <div className="flex flex-col gap-5">
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
+              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
+                002 ///
+              </h1>
+              <h2 className="text-white font-extrabold text-xl">
+                Design and develop
+              </h2>
+            </div>
+            <article className="text-[#f5f1f1] font-light w-full ">
+              Design and development begin with creating a clear visual
+              blueprint of the project. Initially, I design the project in
+              Figma, but if the client does not have a User Interface (UI)
+              ready, I sometimes start with hand-drawn diagrams. Once the design
+              is approved or provided by the client, I translate it into a
+              Next.js application.
+              <br />
+              <br />
+              For state management, I use React Redux to ensure that the
+              application's state is efficiently managed and updated. This
+              approach helps maintain a consistent state across the application,
+              making it easier to handle complex state interactions.
+              <br />
+              <br />
+              API requests are handled server-side, where I set up endpoints to
+              interact with the backend. Data fetching and caching mechanisms
+              are implemented to ensure that data is retrieved efficiently and
+              stored temporarily for quick access. This reduces server load and
+              improves the user experience by delivering faster response times.
+              Based on user requests, the cached data is displayed, ensuring
+              that the application remains responsive and performant.
+            </article>
+          </div>
+          {/* right side  */}
+          <div>
+            <Image
+              src={DesignDev}
+              alt="DesignDev"
+              className="h-[90%] w-[90%] m-auto  max-md:w-full max-md:h-[40%]"
+            />
+          </div>
+        </div>
+        {/* step 3 */}
+        <div
+          className="steps max-md:p-3 border border-[#252525] p-10 
+         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
+        >
+          {/* left side  */}
+          <div className="flex flex-col gap-5">
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
+              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
+                003 ///
+              </h1>
+              <h2 className="text-white font-extrabold text-xl">
+                scalable backend and API
+              </h2>
+            </div>
+            <article className="text-[#f5f1f1] font-light w-full ">
+              To create a scalable backend and API, I use Node.js and
+              Express.js. For database management, I rely on MongoDB with
+              Mongoose as the ORM. For authentication, I implement JWT (JSON Web
+              Tokens), Passport.js, sessions, and cookies to ensure secure and
+              efficient user authentication Pes. Passwords are hashed before
+              being saved into the database to enhance security.
+              <br />
+              <br />
+              For smaller projects, I sometimes use Next.js for the backend,
+              leveraging its server-side rendering and API route capabilities.
+              Depending on the client's requirements, I also integrate cloud
+              storage solutions like Cloudinary for media assets and AWS S3 for
+              scalable object storage. This approach ensures that the backend is
+              robust, secure, and adaptable to various project needs.
+              <br />
+              <br />I use Stripe for handling payments and integrate external
+              APIs to meet various client-specific needs, ensuring a
+              comprehensive and versatile backend solution.
+            </article>
+          </div>
+          {/* right side  */}
+          <div>
+            <Image
+              src={Backend}
+              alt="Backend"
+              className="h-[60%] w-[60%] m-auto  block max-md:w-full max-md:h-[40%]"
+            />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

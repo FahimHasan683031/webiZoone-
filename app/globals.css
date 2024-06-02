@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.steps {
+  position: sticky;
+  top: 0;
+  background-color: #0e121a;
+}
+@media (max-width: 1200px) {
+  .steps {
+    position: static;
+  }
+}
