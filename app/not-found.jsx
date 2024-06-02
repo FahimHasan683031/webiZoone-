@@ -19,7 +19,7 @@ const NotFound = () => {
             <div className='my-auto text-center lg:text-end'>
                 <p className=' text-xl  uppercase text-orange-600'>W e ' r e   <span className='ml-5'>s o r r y</span></p>
                 <p className='text-white text-9xl my-10 md:my-0 md:text-[200px] font-extrabold'>404</p>
-                <ButtonComponent text={"Back Home"} />
+                <ButtonComponent text={"Back Home"}  />
             </div>
             <div className=" text-gray-400 lg:my-auto text-center md:text-2xl mt-20 ">
                 <p>We couldn't find the page you're looking for.</p>

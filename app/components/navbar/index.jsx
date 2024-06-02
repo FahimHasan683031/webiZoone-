@@ -87,17 +87,17 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`w-full fixed top-0 p-5 ${scrollPosition > 1000 && scrollPosition < 2000 ? 'text-black' : 'bg-transparent text-white'} duration-1000 z-50`}>
+    <nav className={` w-full fixed top-0 p-5 ${scrollPosition > 6000 && scrollPosition < 8000 ? 'text-black' : 'bg-transparent text-gray-300'} duration-1000 z-50`}>
       <div ref={navRef} className="flex items-center justify-between md:px-20  py-5">
         <div className="text-lg font-bold">Logo</div>
         <div className="flex gap-10">
           <div>
-            <AnimatedButton text={"LET'S TALK"} textColor={""} font={"font-semibold"} textSize={"text-lg"} borderColor={`${scrollPosition > 1000 && scrollPosition < 2000 ? 'border-black' : 'border-white'}`} />
+            <AnimatedButton text={"LET'S TALK"} textColor={""} font={"font-semibold"} textSize={"text-lg"} borderColor={`${scrollPosition > 6000 && scrollPosition < 8000 ? 'border-black' : 'border-white'}`} />
           </div>
           <MagneticEffect>
             <button
               onClick={handleOpen}
-              className={`focus:outline-none px-2 rounded-full ${scrollPosition > 1000 && scrollPosition < 2000 ? 'text-white bg-black' : 'bg-transparent text-black bg-white duration-1000'}`}
+              className={`focus:outline-none px-2 rounded-full ${scrollPosition > 6000 && scrollPosition < 8000 ? 'text-gray-200 bg-black' : 'bg-transparent text-black bg-white duration-1000'}`}
             >
               <svg className={`w-6 h-6`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
