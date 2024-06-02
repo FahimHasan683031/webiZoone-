@@ -84,7 +84,7 @@ export default function Services() {
               muted
               loop
             />
-            <div className=" z-10 relative flex flex-col gap-5 bg-black bg-opacity-60 p-10 w-full min-h-screen">
+            <div className=" z-10 relative flex items-center justify-center flex-col gap-5 bg-black bg-opacity-60 p-10 w-full min-h-screen">
               <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2"></div>
               <section className="text-[#f5f1f1] w-full flex ">
                 <div className=" w-full flex-1">
@@ -92,7 +92,7 @@ export default function Services() {
                     WHAT WE DO
                   </h4>
                   <h2 className=" text-3xl font-bold text-white py-5">
-                    E-Commerce
+                    Business Website
                   </h2>
                   <div className=" flex items-center flex-wrap gap-2 md:gap-4">
                     {CommerceTags?.map((itm, index) => (
@@ -120,7 +120,7 @@ export default function Services() {
               muted
               loop
             />
-            <div className=" z-10 relative flex flex-col gap-5 bg-black bg-opacity-60 p-10 w-full min-h-screen">
+            <div className=" z-10 relative flex items-center justify-center flex-col gap-5 bg-black bg-opacity-60 p-10 w-full min-h-screen">
               <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2"></div>
               <section className="text-[#f5f1f1] w-full flex ">
                 <div className=" w-full flex-1">
@@ -128,7 +128,7 @@ export default function Services() {
                     WHAT WE DO
                   </h4>
                   <h2 className=" text-3xl font-bold text-white py-5">
-                    E-Commerce
+                    Social Networks
                   </h2>
                   <div className=" flex items-center flex-wrap gap-2 md:gap-4">
                     {CommerceTags?.map((itm, index) => (
