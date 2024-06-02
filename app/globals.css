@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.steps {
+  position: sticky;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .steps {
+    position: static; /* Make the position non-sticky on small screens */
+  }
+  .project-card {
+    position: sticky;
+    top: 0;
+    background-color: #0e121a;
+  }
+}
