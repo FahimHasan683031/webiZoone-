@@ -42,7 +42,7 @@ const About = () => {
                         initialPosition="100%"
                         finalPosition="0%"
                         duration={2}
-                        delay={2}
+                        delay={1.5}
                         position="y"
                     >
 
