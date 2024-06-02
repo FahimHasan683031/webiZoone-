@@ -32,20 +32,10 @@ export default function Services() {
       </div>
       <div className="flex flex-col gap-10 l">
         {/* step 1 */}
-        <div
-          className="steps max-md:p-3 border border-[#252525] p-10 
-         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
-        >
+        <div className="steps max-md:p-3  p-10 shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
           {/* left side  */}
           <div className="flex flex-col gap-5">
-            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
-              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
-                001 ///
-              </h1>
-              <h2 className="text-white font-extrabold text-xl">
-                System design & mindmapping
-              </h2>
-            </div>
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2"></div>
             <article className="text-[#f5f1f1] font-light w-full ">
               Designing for future scalability ensures that your product can
               smoothly accommodate updates and new features while managing
@@ -77,30 +67,12 @@ export default function Services() {
               adapt efficiently, keeping costs under control.
             </article>
           </div>
-          {/* right side  */}
-          <div>
-            <Image
-              src={SystemDesign}
-              alt="SystemDesign"
-              className="h-[60%] w-[60%] m-auto  block max-md:w-full"
-            />
-          </div>
         </div>
         {/* step 2 */}
-        <div
-          className="steps max-md:p-3 border border-[#252525] p-10 
-         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
-        >
+        <div className="steps max-md:p-3  p-10 shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
           {/* left side  */}
           <div className="flex flex-col gap-5">
-            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
-              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
-                002 ///
-              </h1>
-              <h2 className="text-white font-extrabold text-xl">
-                Design and develop
-              </h2>
-            </div>
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2"></div>
             <article className="text-[#f5f1f1] font-light w-full ">
               Design and development begin with creating a clear visual
               blueprint of the project. Initially, I design the project in
@@ -125,30 +97,12 @@ export default function Services() {
               that the application remains responsive and performant.
             </article>
           </div>
-          {/* right side  */}
-          <div>
-            <Image
-              src={DesignDev}
-              alt="DesignDev"
-              className="h-[90%] w-[90%] m-auto  max-md:w-full max-md:h-[40%]"
-            />
-          </div>
         </div>
         {/* step 3 */}
-        <div
-          className="steps max-md:p-3 border border-[#252525] p-10 
-         shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse"
-        >
+        <div className="steps max-md:p-3  p-10 shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
           {/* left side  */}
           <div className="flex flex-col gap-5">
-            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2">
-              <h1 className="uppercase text-[#7f8bf1]  text-lg tracking-wider codefont">
-                003 ///
-              </h1>
-              <h2 className="text-white font-extrabold text-xl">
-                scalable backend and API
-              </h2>
-            </div>
+            <div className="flex gap-10 items-center max-md:flex-wrap max-md:gap-2"></div>
             <article className="text-[#f5f1f1] font-light w-full ">
               To create a scalable backend and API, I use Node.js and
               Express.js. For database management, I rely on MongoDB with
@@ -169,14 +123,6 @@ export default function Services() {
               APIs to meet various client-specific needs, ensuring a
               comprehensive and versatile backend solution.
             </article>
-          </div>
-          {/* right side  */}
-          <div>
-            <Image
-              src={Backend}
-              alt="Backend"
-              className="h-[60%] w-[60%] m-auto  block max-md:w-full max-md:h-[40%]"
-            />
           </div>
         </div>
       </div>
