@@ -117,7 +117,7 @@ const BannerComponent = () => {
                             position="y"
                         >
 
-                            <ButtonComponent text={'Get to know us'} link={'/'} />
+                            <ButtonComponent text={'Get to know us'} link={'/'}/>
                         </AnimatedBox>
                     </div>
 

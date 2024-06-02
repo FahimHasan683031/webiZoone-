@@ -63,7 +63,7 @@ const FeaturedWorks = () => {
                 ))}
             </div>
             <div className="mt-40 flex justify-center lg:ml-10 overflow-hidden">
-                <ButtonComponent hoverBg="gray-700" textColor='black' text={'VIEW MORE WORK'} link={'/'} />
+                <ButtonComponent textColor='black' text={'VIEW MORE WORK'} link={'/'} BGColor='bg-gray-300' />
             </div>
         </div>
     );
