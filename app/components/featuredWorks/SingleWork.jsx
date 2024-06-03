@@ -13,6 +13,7 @@ const SingleWork = ({ project, index }) => {
                 finalPosition= "0%"
                 duration={1}
                 delay={0}
+                once={true}
                 containerRef={containerRef}
                 position="y"
             >
