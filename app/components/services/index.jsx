@@ -3,63 +3,96 @@
 import React from "react";
 import ScrollAnimation from "../common/scrollAnimation/ScrollAnimation";
 
-const CommerceTags = [
-  "UX, research",
-  "MVP for startups",
-  "UX, research",
-  "MVP for startups",
-  "UX, research",
-  "MVP for startups",
-];
-
 const servicesData = [
   {
-    title: "E-Commerce",
+    title: "Website Design & Development",
+    detail: "We build all types of websites. Some websites are listed below",
     videoSrc: "/ecommerce.mp4",
+    category: [
+      "E-Commerce",
+      "Business Website",
+      "Social Networks",
+      "Medical & healthcare",
+      "Forum Website",
+      "Portal Website",
+      "Membership Website",
+      "Entertainment",
+      "News",
+      "blog",
+      "Government Website",
+    ],
   },
   {
-    title: "Business Website",
+    title: "Mobile Application Development",
+    detail:
+      "We build all types of Application. Some application are listed below",
     videoSrc: "/business.mp4",
+    category: [
+      "Lifestyle Mobile Apps",
+      "Social Media Mobile Apps",
+      "Utility Mobile Apps",
+      "Entertainment Mobile Apps",
+      "Productivity Mobile Apps",
+      "News/Information Mobile Apps",
+      "Google Play/App Store Search",
+      "Recommendations",
+    ],
   },
   {
-    title: "Social Networks",
+    title: "Digital Marketing",
+    detail:
+      "We mainly focus on these types of services in the digital marketing sector",
     videoSrc: "/Social.mp4",
+    category: [
+      "SEO (Search Engine Optimization)",
+      "SEM (Search Engine Marketing)",
+      "SMM (Social Media Marketing)",
+      "Paid advertising",
+      "PPC (Pay-Per-Click)",
+      "Content Marketing",
+      "Email Marketing",
+      "Affiliate Marketing",
+      "TV Advertising",
+      "Video Marketing",
+    ],
   },
   {
-    title: "Medical & healthcare",
-    videoSrc: "/ecommerce.mp4",
-  },
-  {
-    title: "Forum Website",
+    title: "Video Editing",
+    detail: "The services provided in the graphic Design",
     videoSrc: "/business.mp4",
+    category: [
+      "Commercial",
+      "Documentary",
+      "Corporate",
+      "Social content",
+      "Advertisement",
+    ],
   },
   {
-    title: "Portal Website",
-    videoSrc: "/Social.mp4",
-  },
-  {
-    title: "Membership Website",
+    title: "Graphic Design",
+    detail: "The services provided in the graphic Design",
     videoSrc: "/ecommerce.mp4",
-  },
-  {
-    title: "Entertainment",
-    videoSrc: "/business.mp4",
-  },
-  {
-    title: "News",
-    videoSrc: "/Social.mp4",
-  },
-  {
-    title: "Blog",
-    videoSrc: "/ecommerce.mp4",
-  },
-  {
-    title: "Government Website",
-    videoSrc: "/business.mp4",
+    category: [
+      "Advertising Graphic Design",
+      "Packaging Graphic Design",
+      "Product Design",
+      "Brochure Design",
+      "Book Cover Design",
+      "Stationery Design",
+      "Customize T-shirt Design",
+      "Environmental Graphic Design",
+      "Corporate Design",
+      "Website Graphic Design",
+      "Label Design",
+      "Vehicle Wrap Graphic Design",
+      "Publication Graphic Design],",
+    ],
   },
 ];
 
-const ServiceCard = ({ title, videoSrc }) => (
+// console.log(servicesData);
+
+const ServiceCard = ({ title, videoSrc, detail, category }) => (
   <div className="steps project-card shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse w-full">
     <div className="relative w-full">
       <video
@@ -75,13 +108,17 @@ const ServiceCard = ({ title, videoSrc }) => (
             <h4 className="font-semibold font-mono text-gray-200">
               WHAT WE DO
             </h4>
-            <h2 className=" text-xl md:text-3xl font-bold text-white py-5">
+            <h2 className="text-xl md:text-3xl font-bold text-white mt-5">
               {title}
             </h2>
-            <div className="flex items-center flex-wrap gap-2 md:gap-4">
-              {CommerceTags.map((tag, index) => (
+            <p className=" font-medium text-sm mt-2">{detail}</p>
+            <div className="flex items-center flex-wrap gap-2 md:gap-3 py-6">
+              {category?.map((tag, index) => (
                 <div key={index}>
-                  <button className="hover:border rounded-md shadow-md text-white bg-[tags] px-5 py-3">
+                  <button
+                    key={index}
+                    className="hover:border rounded-md shadow-md text-white bg-[tags] px-5 py-3"
+                  >
                     {tag}
                   </button>
                 </div>
@@ -124,7 +161,9 @@ export default function Services() {
           <ServiceCard
             key={index}
             title={service.title}
+            detail={service.detail}
             videoSrc={service.videoSrc}
+            category={service.category}
           />
         ))}
       </div>
