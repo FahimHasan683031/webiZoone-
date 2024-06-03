@@ -36,9 +36,9 @@ export default function Services() {
           </div>
         </ScrollAnimation>
       </div>
-      <div className="flex flex-col gap-10 l">
+      <div className="flex flex-col gap-10 flex-wrap">
         {/* step 1 */}
-        <div className="steps shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse w-full">
+        <div className="steps project-card shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse w-full">
           {/* left side  */}
           <div className=" relative w-full">
             <video
@@ -74,7 +74,7 @@ export default function Services() {
           </div>
         </div>
         {/* step 2 */}
-        <div className="steps shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
+        <div className="steps project-card shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
           {/* left side  */}
           <div className=" relative w-full">
             <video
@@ -110,7 +110,7 @@ export default function Services() {
           </div>
         </div>
         {/* step 3 */}
-        <div className="steps shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
+        <div className="steps project-card shadow-lg flex justify-between gap-10 items-start max-md:flex-wrap max-md:flex-col-reverse">
           {/* left side  */}
           <div className=" relative w-full">
             <video
