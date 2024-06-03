@@ -1,7 +1,7 @@
 import { FiArrowRight } from "react-icons/fi";
 const Newsletter = () => {
   return (
-    <div className="flex justify-around items-center py-16 px-5 md:px-1 md:py-32 lg:py-40  bg-gradient-to-r from-[#261c16] to-[#0b2728]  my-10">
+    <div className="flex justify-around items-center py-16 px-5 md:px-1 md:py-32 lg:py-40  bg-gradient-to-r from-[#261c16] to-[#0b2728]  my-20">
       <div className="text-white font-medium text-[14px] md:text-2xl w-1/2">
         Sign up for our newsletter.
       </div>
