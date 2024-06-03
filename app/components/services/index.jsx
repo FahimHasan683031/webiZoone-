@@ -25,6 +25,38 @@ const servicesData = [
     title: "Social Networks",
     videoSrc: "/Social.mp4",
   },
+  {
+    title: "Medical & healthcare",
+    videoSrc: "/ecommerce.mp4",
+  },
+  {
+    title: "Forum Website",
+    videoSrc: "/business.mp4",
+  },
+  {
+    title: "Portal Website",
+    videoSrc: "/Social.mp4",
+  },
+  {
+    title: "Membership Website",
+    videoSrc: "/ecommerce.mp4",
+  },
+  {
+    title: "Entertainment",
+    videoSrc: "/business.mp4",
+  },
+  {
+    title: "News",
+    videoSrc: "/Social.mp4",
+  },
+  {
+    title: "Blog",
+    videoSrc: "/ecommerce.mp4",
+  },
+  {
+    title: "Government Website",
+    videoSrc: "/business.mp4",
+  },
 ];
 
 const ServiceCard = ({ title, videoSrc }) => (
@@ -37,13 +69,15 @@ const ServiceCard = ({ title, videoSrc }) => (
         muted
         loop
       />
-      <div className="z-10 relative flex flex-col items-center justify-center gap-5 bg-black bg-opacity-60 p-10 w-full min-h-screen">
+      <div className="z-10 relative flex flex-col items-center justify-center gap-5 bg-black bg-opacity-60 p-5 md:p-10 w-full min-h-screen">
         <section className="text-[#f5f1f1] w-full flex">
           <div className="w-full flex-1">
             <h4 className="font-semibold font-mono text-gray-200">
               WHAT WE DO
             </h4>
-            <h2 className="text-3xl font-bold text-white py-5">{title}</h2>
+            <h2 className=" text-xl md:text-3xl font-bold text-white py-5">
+              {title}
+            </h2>
             <div className="flex items-center flex-wrap gap-2 md:gap-4">
               {CommerceTags.map((tag, index) => (
                 <div key={index}>
