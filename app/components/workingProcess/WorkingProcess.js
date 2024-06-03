@@ -1,7 +1,5 @@
 "use client";
-import { FaRegCircle } from "react-icons/fa6";
-import { FaGgCircle } from "react-icons/fa6";
-
+import { FaGgCircle, FaRegCircle } from "react-icons/fa6";
 const WorkingProcess = () => {
   return (
     <div className=" h-[700px] md:h-[750px] lg:h-[850px]  max-w-screen-md mx-auto mb-20 mt-32 px-5 lg:px-0">
@@ -115,10 +113,10 @@ const WorkingProcess = () => {
           </div>
         </div>
       </div>
+
+      <section></section>
     </div>
   );
 };
 
 export default WorkingProcess;
-
-
