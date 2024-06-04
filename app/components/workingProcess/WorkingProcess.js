@@ -63,8 +63,8 @@ const WorkingProcess = () => {
           duration: 1,
           scrollTrigger: {
             trigger: item,
-            start: "top 80%",
-            end: "bottom 10%",
+            start: "top 90%",
+            end: "bottom 70%",
             scrub: true,
             toggleActions: "play none none reverse",
           },
@@ -79,8 +79,8 @@ const WorkingProcess = () => {
         height: "100%",
         scrollTrigger: {
           trigger: timelineRef.current,
-          start: "top top",
-          end: "bottom bottom",
+          start: "top 90%",
+          end: "bottom 80%",
           scrub: true,
           onUpdate: (self) => {
             controls.start({ height: `${self.progress * 100}%` });
