@@ -7,6 +7,7 @@ import Services from "./components/services";
 import WorkingProcess from "./components/workingProcess/WorkingProcess";
 import FeaturedWorks from "./components/featuredWorks/FeaturedWorks";
 import About from "./components/about/About";
+import CompanyStats from "./components/companyStats/CompanyStats";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Newsletter />
       <ClientReview />
       <WorkingProcess />
+      <CompanyStats></CompanyStats>
     </main>
   );
 }
