@@ -78,16 +78,8 @@ const FooterComponent = () => {
                         <p className='font-extrabold uppercase'>Explore</p>
                         <div className='grid grid-flow-row md:grid-cols-3 lg:grid-cols-5 gap-5 mt-2'>
                             {
-                                quickLink?.map(link => <p key={link?.id}> <AnimatedButton text={link?.name} link={''} textColor={"text-orange-600"} /> </p>)
+                                quickLink?.map(link => <div key={link?.id}> <AnimatedButton text={link?.name} link={''} textColor={"text-orange-600"} /> </div>)
                             }
-                            
-                            {/* <AnimatedButton text={"Work"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"About Us"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Blogs"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Review"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Contact Us"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Career"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Template"} link={''} textColor={"text-orange-600"} /> */}
                         </div>
 
                         <p className='mt-2 text-gray-400'>5 E Santa Clara St, Ste 1425 San Jose, California 95113</p>
