@@ -1,10 +1,6 @@
-import { useEffect, useRef } from "react";
 import StatCard from "./StatCard";
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollAnimation from "../common/scrollAnimation/ScrollAnimation";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const CompanyStats = () => {
     const stats = [
@@ -40,7 +36,6 @@ const CompanyStats = () => {
         numbers: "7"
     }
 
-
     return (
         <div className="w-full min-h-screen bg-[#B5C0C9]">
             <div className="grid grid-cols-5  px-10 py-28">
@@ -51,7 +46,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.6}
+                        delay={0.8}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -66,7 +61,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.7}
+                        delay={0.9}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -81,7 +76,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.6}
+                        delay={0.8}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -96,7 +91,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.7}
+                        delay={0.9}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -111,7 +106,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.6}
+                        delay={0.8}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}

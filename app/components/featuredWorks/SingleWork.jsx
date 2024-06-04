@@ -7,13 +7,12 @@ const SingleWork = ({ project, index }) => {
     const containerRef = useRef();
 
     return (
-        <div className={`relative w-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>
+        <div className={`relative w-full h-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>
             <ScrollAnimation
                 initialPosition="30%"
-                finalPosition= "0%"
+                finalPosition="0%"
                 duration={1}
                 delay={0}
-                once={true}
                 containerRef={containerRef}
                 position="y"
             >
@@ -45,6 +44,7 @@ const SingleWork = ({ project, index }) => {
 
             </ScrollAnimation>
         </div>
+
     );
 };
 
