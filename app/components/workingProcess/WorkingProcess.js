@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FaGgCircle, FaRegCircle } from "react-icons/fa6";
@@ -120,7 +121,7 @@ const WorkingProcess = () => {
 
   return (
     <>
-      <div className="relative px-5 max-w-screen-lg mx-auto">
+      <div className="relative px-5 max-w-screen-lg mx-auto my-20">
         <div className="w-[3.5px] bg-[#bc4a32] h-[22px] absolute -top-6 left-[50%]"></div>
         <div className="grid grid-cols-3 ">
           <FaGgCircle className="text-xl md:text-3xl " />

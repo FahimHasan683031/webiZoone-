@@ -60,7 +60,7 @@ const CompanyStats = () => {
     }, []);
 
     return (
-        <div className="w-full min-h-screen bg-[#B5C0C9] relative py-20">
+        <div className="w-full min-h-screen bg-[#B5C0C9] relative py-20 overflow-hidden">
             {/* background video for large and medium devices */}
             <div className="absolute hidden md:flex top-20 w-full h-screen mix-blend-color-dodge opacity-80 translate-z-0  justify-center items-center">
                 <video
