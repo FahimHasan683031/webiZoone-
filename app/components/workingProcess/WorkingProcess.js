@@ -120,9 +120,9 @@ const WorkingProcess = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative px-5 max-w-screen-lg mx-auto">
         <div className="w-[3.5px] bg-[#bc4a32] h-[22px] absolute -top-6 left-[50%]"></div>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 ">
           <FaGgCircle className="text-xl md:text-3xl " />
           <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-slate-800 text-center">
             Our Process
@@ -142,9 +142,10 @@ const WorkingProcess = () => {
         </p>
       </div>
 
-      <div className="h-[700px] md:h-[750px] lg:h-[850px] max-w-screen-md mx-auto mb-20 mt-32 px-5 lg:px-0">
+      <div className="h-[500px] md:h-[650px] lg:h-[750px] max-w-screen-md mx-auto mb-10 mt-12 px-5 lg:px-0">
         <section ref={timelineRef}>
           <div className="relative">
+          <div className="w-[3.5px] bg-gray-300 h-[440px] md:h-[580px] lg:h-[630px] absolute  left-[50%]"></div>
             <motion.div
               className="vertical-line w-[3.5px] bg-[#bc4a32] absolute top-0 left-[50%]"
               initial={{ height: 0 }}
