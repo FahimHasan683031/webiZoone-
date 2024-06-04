@@ -34,7 +34,7 @@ const SingleWork = ({ project, index }) => {
                             initialPosition="100%"
                             finalPosition="0%"
                             duration={1}
-                            delay={0.5}
+                            delay={0.2}
                             position="y">
                             <h2 className='text-3xl font-bold md:tracking-wider tracking-wide'>{project?.title}</h2>
                             <p className='mt-2 text-lg tracking-wide'>{project?.description}</p>
