@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
+import { motion, useAnimation } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -32,6 +33,7 @@ const WorkingProcess = () => {
   const timelineRef = useRef(null);
   const [isScrollUp, setIsScrollUp] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const controls = useAnimation();
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -62,14 +64,31 @@ const WorkingProcess = () => {
           scrollTrigger: {
             trigger: item,
             start: "top 80%",
-            end: "bottom 60%",
+            end: "bottom 10%",
             scrub: true,
             toggleActions: "play none none reverse",
           },
         }
       );
     });
-  }, []);
+
+    gsap.fromTo(
+      ".vertical-line",
+      { height: 0 },
+      {
+        height: "100%",
+        scrollTrigger: {
+          trigger: timelineRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+          onUpdate: (self) => {
+            controls.start({ height: `${self.progress * 100}%` });
+          },
+        },
+      }
+    );
+  }, [controls]);
 
   const timelineData = [
     {
@@ -103,16 +122,27 @@ const WorkingProcess = () => {
     <div className="h-[700px] md:h-[750px] lg:h-[850px] max-w-screen-md mx-auto mb-20 mt-32 px-5 lg:px-0">
       <section ref={timelineRef}>
         <div className="relative">
-          <div className="w-[3.5px] bg-[#bc4a32] h-[420px] md:h-[570px] lg:h-[620px] absolute top-0 left-[50%]"></div>
+          <motion.div
+            className="vertical-line w-[3.5px] bg-[#bc4a32] absolute top-0 left-[50%]"
+            initial={{ height: 0 }}
+            animate={controls}
+          />
           {timelineData.map((item, index) => (
-            <div key={index} className="timeline-item">
+            <motion.div
+              key={index}
+              className="timeline-item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 2 }}
+            >
               <TimelineItem
                 title={item.title}
                 description={item.description}
                 index={index}
                 isScrollUp={isScrollUp}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
