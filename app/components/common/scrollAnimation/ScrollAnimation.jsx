@@ -9,7 +9,13 @@ const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', init
     const containerRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(
+        let pageTl;
+
+        if (pageTl) {
+            pageTl.kill();
+        }
+
+        pageTl = gsap.fromTo(
             containerRef?.current,
             { [position]: initialPosition , opacity: initialOpacity},
             {
@@ -23,10 +29,18 @@ const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', init
                     start: "top bottom",
                     // end: "",
                     once: once,
+                    scrub: false,
                     toggleActions: toggleActions, // Adjust this as needed
                 },
             }
         );
+
+        // Cleanup function
+        return () => {
+            if (pageTl) {
+                pageTl.kill();
+            }
+        };
 
        
     }, [delay, initialPosition, finalPosition, position, duration, containerRef, initialOpacity, finalOpacity, once, toggleActions]);
@@ -39,8 +53,6 @@ const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', init
 };
 
 export default ScrollAnimation;
-
-
 
 
 

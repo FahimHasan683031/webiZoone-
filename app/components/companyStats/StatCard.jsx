@@ -10,30 +10,40 @@ const StatCard = ({ stat, index }) => {
     const boxRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(
+        let pageTl;
+
+        if (pageTl) {
+            pageTl.kill();
+        }
+
+        pageTl = gsap.fromTo(
             boxRef.current,
-            { y: "0%", display: "block" },
+            { y: "120%" },
             {
-                y: "-100%",
-                display: "none",
+                y: "0%",
                 duration: 0.3,
                 delay: 0.4,
                 scrollTrigger: {
                     trigger: boxRef.current,
                     start: "top bottom",
-                    end: "top top",
+                    // end: "top top",
                     scrub: false,
+                    toggleActions: "play",
                 },
             }
         );
+
+        // Cleanup function
+        return () => {
+            if (pageTl) {
+                pageTl.kill();
+            }
+        };
     }, []);
 
     return (
         <div className={`stat ${index !== 5 && "mr-7"} relative overflow-hidden`}>
-            <div className="overflow-hidden">
-                <div ref={boxRef} className="bg-[#B5C0C9] border-8 border-[#B5C0C9] w-full h-full absolute top-0 left-0"></div>
-            </div>
-            <div className="group bg-[#FFF] hover:text-white hover:bg-black hover:scale-[0.97] duration-700  transition-all ease-in-out">
+            <div ref={boxRef} className="group bg-[#FFF] hover:text-white hover:bg-black hover:scale-[0.97] duration-700  transition-all ease-in-out">
                 <div className="h-[280px] p-8 flex flex-col justify-between">
                     <h4 className="font-medium ">00{index + 1}</h4>
                     <h3 className="text-2xl font-semibold">{stat?.title}</h3>

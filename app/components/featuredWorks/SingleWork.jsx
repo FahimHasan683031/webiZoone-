@@ -4,7 +4,7 @@ import ScrollAnimation from '../common/scrollAnimation/ScrollAnimation';
 import "./work.css";
 
 const SingleWork = ({ project, index }) => {
-    const containerRef = useRef();
+  const containerRef = useRef();
 
     return (
         <div className={`relative w-full h-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>

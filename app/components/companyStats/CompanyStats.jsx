@@ -1,5 +1,6 @@
 import StatCard from "./StatCard";
 import ScrollAnimation from "../common/scrollAnimation/ScrollAnimation";
+import video from "@/public/stat-bg-video.mp4";
 
 
 const CompanyStats = () => {
@@ -37,8 +38,17 @@ const CompanyStats = () => {
     }
 
     return (
-        <div className="w-full min-h-screen bg-[#B5C0C9]">
-            <div className="grid grid-cols-5  px-10 py-28">
+        <div className="w-full min-h-screen bg-[#B5C0C9] relative">
+            <div className="absolute w-full h-screen mix-blend-color-dodge opacity-80 translate-z-0 flex justify-center items-center">
+                <video
+                    className="w-1/2 rounded-full h-full object-cover z-0"
+                    src={video}
+                    autoPlay
+                    muted
+                    loop
+                />
+            </div>
+            <div className="grid grid-cols-5 px-10 py-28">
                 <div>
                     <ScrollAnimation
                         initialPosition="200%"
@@ -46,7 +56,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.8}
+                        delay={1.2}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -61,7 +71,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.9}
+                        delay={1.3}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -76,7 +86,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.8}
+                        delay={1.3}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -91,7 +101,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.9}
+                        delay={1.3}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -106,7 +116,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={0.8}
+                        delay={1.2}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
