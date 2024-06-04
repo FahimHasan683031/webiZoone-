@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import ScrollAnimation from '../common/scrollAnimation/ScrollAnimation';
 import "./work.css";
 
 const SingleWork = ({ project, index }) => {
-    const containerRef = useRef();
+  const containerRef = useRef();
 
     return (
-        <div className={`relative w-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>
+        <div className={`relative w-full h-full p-5 md:p-0 flex flex-col justify-center items-center lg:justify-normal lg:items-start ${index % 2 !== 0 ? "lg:-mt-20" : ""}`}>
             <ScrollAnimation
                 initialPosition="30%"
-                finalPosition= "0%"
+                finalPosition="0%"
                 duration={1}
                 delay={0}
                 containerRef={containerRef}
@@ -34,7 +34,7 @@ const SingleWork = ({ project, index }) => {
                             initialPosition="100%"
                             finalPosition="0%"
                             duration={1}
-                            delay={0.5}
+                            delay={0.2}
                             position="y">
                             <h2 className='text-3xl font-bold md:tracking-wider tracking-wide'>{project?.title}</h2>
                             <p className='mt-2 text-lg tracking-wide'>{project?.description}</p>
@@ -44,6 +44,7 @@ const SingleWork = ({ project, index }) => {
 
             </ScrollAnimation>
         </div>
+
     );
 };
 
