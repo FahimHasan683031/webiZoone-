@@ -134,23 +134,23 @@ const ServiceCard = ({ title, videoSrc, detail, category }) => (
 
 export default function Services() {
   return (
-    <div>
-      <div className="mb-16 overflow-hidden mt-56 max-w-screen-xl lg:px-5 xl:px-0 mx-auto">
+    <div className=" pt-56 bg-gray-300">
+      <div className="mb-16 overflow-hidden max-w-screen-xl lg:px-5 xl:px-0 mx-auto">
         <ScrollAnimation
           initialPosition="100%"
           finalPosition="0%"
           duration={1}
-          delay={0.7}
+          delay={0.5}
           position="y"
         >
-          <div className="flex flex-col justify-center items-center lg:justify-normal lg:items-start">
+          <div className=" flex flex-col justify-center items-center lg:justify-normal lg:items-start">
             <h1 className="md:text-6xl text-4xl font-bold">
               Services we offer
             </h1>
             <h1 className="md:text-2xl text-xl font-semibold mt-2">
               Website Design & Development
             </h1>
-            <p className="mt-8 text-gray-600 text-lg text-center">
+            <p className="mt-8 text-gray-800 text-lg text-center">
               We build all types of websites. Some websites are listed below
             </p>
           </div>

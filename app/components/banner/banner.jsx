@@ -126,7 +126,7 @@ const BannerComponent = () => {
             </div>
 
 
-            <div className="fixed text-gray-400 bottom-40 -right-10 md:right-10 flex gap-5 rotate-90 ">
+            <div className="fixed text-gray-400 bottom-40 -right-10 md:right-10 flex gap-5 rotate-90 z-40">
                 <p className="border-b w-20 my-auto animate-expand"></p>
                 <p className="uppercase"> Scroll</p>
             </div>
