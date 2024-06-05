@@ -19,7 +19,7 @@ export default function Home() {
       <WorkingProcess />
       <CompanyStats />
       <ClientReview />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   );
 }
