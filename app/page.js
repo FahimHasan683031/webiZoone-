@@ -17,9 +17,8 @@ export default function Home() {
       <FeaturedWorks />
       <About />
       <WorkingProcess />
-      <CompanyStats />
-      <ClientReview />
       <Newsletter />
+      <ClientReview />
     </main>
   );
 }
