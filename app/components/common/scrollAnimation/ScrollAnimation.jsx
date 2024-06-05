@@ -5,16 +5,22 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', duration = 1, delay = 0, position = 'x', children}) => {
+const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', initialOpacity = 0, finalOpacity = 1, duration = 1, delay = 0, position = 'x', children, once = true, toggleActions = "play"}) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(
+        let pageTl;
+
+        if (pageTl) {
+            pageTl.kill();
+        }
+
+        pageTl = gsap.fromTo(
             containerRef?.current,
-            { [position]: initialPosition , opacity: 0},
+            { [position]: initialPosition , opacity: initialOpacity},
             {
                 [position]: finalPosition,
-                opacity: 1,
+                opacity: finalOpacity,
                 duration: duration,
                 delay: delay,
                 // paused: true, 
@@ -22,19 +28,31 @@ const ScrollAnimation = ({ initialPosition = '-100%', finalPosition = '0%', dura
                     trigger: containerRef?.current,
                     start: "top bottom",
                     // end: "",
-                    once: true
+                    once: once,
+                    scrub: false,
+                    toggleActions: toggleActions, // Adjust this as needed
                 },
             }
         );
 
+        // Cleanup function
+        return () => {
+            if (pageTl) {
+                pageTl.kill();
+            }
+        };
+
        
-    }, [delay, initialPosition, finalPosition, position, duration, containerRef]);
+    }, [delay, initialPosition, finalPosition, position, duration, containerRef, initialOpacity, finalOpacity, once, toggleActions]);
 
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} >
             {children}
         </div>
     );
 };
 
 export default ScrollAnimation;
+
+
+

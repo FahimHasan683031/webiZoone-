@@ -10,9 +10,46 @@ import AnimatedButton from '../common/animatedButton';
 
 const FooterComponent = () => {
 
+    const quickLink =  [
+          {
+            "id": "01",
+            "name": "Services"
+          },
+          {
+            "id": "02",
+            "name": "Work"
+          },
+          {
+            "id": "03",
+            "name": "About us"
+          },
+          {
+            "id": "04",
+            "name": "Blog"
+          },
+          {
+            "id": "05",
+            "name": "Reviews"
+          },
+          {
+            "id": "06",
+            "name": "Contact us"
+          },
+          {
+            "id": "07",
+            "name": "Career"
+          },
+          {
+            "id": "08",
+            "name": "Template"
+          }
+        ]
+      
+      
+
     return (
-        <footer className='h-[700px] bg-black text-white'>
-            <div className='max-w-7xl mx-auto py-40 grid grid-cols-2'>
+        <footer className=' bg-black text-white z-50 p-2'>
+            <div className='max-w-7xl mx-auto pt-20 lg:pt-40 md:grid md:grid-cols-2'>
                 <div>
                     <Image className='w-16' src={logo} alt='logo' />
                     <p className='mt-10 text-2xl w-1/2'>Making great things in Silicon Valley.</p>
@@ -37,14 +74,12 @@ const FooterComponent = () => {
                     </div>
                     {/* <button className='border-b border-orange-600 text-lg mt-5 text-orange-600  hover:border-orange-600 hover:transition duration-2000 transform hover:translate-x-10'>123456789</button> */}
 
-                    <div className='mt-28'>
+                    <div className='mt-14 lg:mt-28'>
                         <p className='font-extrabold uppercase'>Explore</p>
-                        <div className='flex gap-5 mt-2'>
-                            <AnimatedButton text={"Work"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"About"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Career"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Demo"} link={''} textColor={"text-orange-600"} />
-                            <AnimatedButton text={"Demo"} link={''} textColor={"text-orange-600"} />
+                        <div className='grid grid-flow-row md:grid-cols-3 lg:grid-cols-5 gap-5 mt-2'>
+                            {
+                                quickLink?.map(link => <div key={link?.id}> <AnimatedButton text={link?.name} link={''} textColor={"text-orange-600"} /> </div>)
+                            }
                         </div>
 
                         <p className='mt-2 text-gray-400'>5 E Santa Clara St, Ste 1425 San Jose, California 95113</p>
