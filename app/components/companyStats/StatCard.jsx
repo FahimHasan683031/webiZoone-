@@ -22,7 +22,7 @@ const StatCard = ({ title, numbers, index }) => {
             {
                 y: "0%",
                 duration: 0.3,
-                delay: 0.4,
+                delay: 2,
                 scrollTrigger: {
                     trigger: boxRef.current,
                     start: "top bottom",
@@ -42,7 +42,7 @@ const StatCard = ({ title, numbers, index }) => {
     }, []);
 
     return (
-        <div className={`stat ${index !== 5 && "lg:mr-5 mr-3"} relative overflow-hidden`}>
+        <div className={`stat ${index !== 5 && "lg:mr-5 md:mr-3"} relative overflow-hidden`}>
             <div ref={boxRef} className="group bg-[#FFF] hover:text-white hover:bg-black hover:scale-[0.97] duration-700  transition-all ease-in-out">
                 <div className="xl:h-[280px] h-[200px] lg:h-[220px] md:h-[180px] xl:p-8 p-8 lg:p-6 md:p-4 flex flex-col justify-between">
                     <h4 className="font-medium ">00{index + 1}</h4>
