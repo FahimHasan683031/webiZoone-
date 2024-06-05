@@ -46,7 +46,6 @@ const Navbar = () => {
     { id: 5, title: 'Reviews', link: '/reviews' },
     { id: 6, title: 'Contact us', link: '/contact-us' },
     { id: 7, title: 'Career', link: '/career' },
-    { id: 8, title: 'Template (Next Update)', link: '/template-next-update' },
   ];
 
   useEffect(() => {
@@ -170,7 +169,7 @@ const Navbar = () => {
       >
         <div className="w-full flex items-center justify-between md:px-20 py-5 mt-5">
           <div className="">
-            <Image quality={100} className='w-2/3 pl-2' src={logo} alt='logo' />
+            <Image quality={100} className='w-1/3 pl-2' src={logo} alt='logo' />
           </div>
           <div className="flex gap-10">
             <div>
@@ -191,7 +190,7 @@ const Navbar = () => {
 
         <div className="w-full min-h-screen my-auto text-2xl border lg:grid lg:grid-cols-2 gap-5">
           <div className="mx-auto mt-2 md:mt-20 flex">
-            <p className="w-20 h-10 text-sm md:text-lg -rotate-90 font-bold uppercase">Menu</p>
+            <p className="w-20 h-10 text-sm md:text-lg -rotate-90 font-bold uppercase text-primary">Explore</p>
             <div className=" overflow-hidden">
               {navItem.map((item, index) => (
                 <AnimatedBox
@@ -211,7 +210,7 @@ const Navbar = () => {
                   >
 
 
-                    <span className={`text-sm align-text-top text-black duration-1000 transition-colors ${hoveredIndex === index ? ' text-black' : 'duration-100 text-gray-200'} ${hoveredIndex === index && `  text-black`} `}>
+                    <span className={`text-sm align-text-top  duration-1000 transition-colors ${hoveredIndex === index ? ' text-black' : 'duration-100 text-gray-200'} ${hoveredIndex === index && `text-primary`} `}>
                       0{item?.id}
                     </span>
 
@@ -220,7 +219,7 @@ const Navbar = () => {
                       <span
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(-1)} // Reset hoveredIndex to -1 when mouse leaves
-                        className={` py-2 inline-block transition-transform duration-1000 ${hoveredIndex === -1 && 'transition-colors duration-1000 text-black'}  ${hoveredIndex === index && `translate-x-5 transition-colors duration-1000 text-black`}`}
+                        className={` py-2 inline-block transition-transform duration-1000 ${hoveredIndex === -1 && 'transition-colors duration-1000 text-black'}  ${hoveredIndex === index && `translate-x-5 transition-colors duration-1000 text-primary`}`}
                       >
                         {item.title}
                       </span>
@@ -233,31 +232,14 @@ const Navbar = () => {
           </div>
           <div className="my-auto mx-auto">
 
-            <div className="p-5">
+            <div className="p-2">
               <AnimatedBox initialPosition="100%"
                 finalPosition="0%"
                 duration={1}
                 delay={0.2}
                 position="y"
                 isOpen={isOpen}>
-                <AnimatedButton text={"hello@gmail.com"} link={''} textColor={"text-[#b31e79]"} />
-              </AnimatedBox>
-              <br />
-              <AnimatedBox initialPosition="100%"
-                finalPosition="0%"
-                duration={1}
-                delay={0.2}
-                position="y"
-                isOpen={isOpen}>
-                <AnimatedButton text={"123456789"} link={''} textColor={"text-[#b31e79]"} />
-              </AnimatedBox>
-              <AnimatedBox initialPosition="100%"
-                finalPosition="0%"
-                duration={1}
-                delay={0.2}
-                position="y"
-                isOpen={isOpen}>
-                <p className="w-2/3 my-5 text-sm">75 E Santa Clara St, Ste 1425 San Jose, California 95113</p>
+                <AnimatedButton text={"webizoneit@gmail.com"} link={''} textColor={"text-primary"} />
               </AnimatedBox>
 
               <AnimatedBox initialPosition="100%"
@@ -266,7 +248,24 @@ const Navbar = () => {
                 delay={0.2}
                 position="y"
                 isOpen={isOpen}>
-                <div className="mt-10 flex gap-5">
+                <AnimatedButton text={"01601-054041"} link={''} textColor={"text-primary"} />
+              </AnimatedBox>
+              <AnimatedBox initialPosition="100%"
+                finalPosition="0%"
+                duration={1}
+                delay={0.2}
+                position="y"
+                isOpen={isOpen}>
+                <p className="w-2/3 my-5 text-sm">Road No. 12, Block A, Bosila , Mohammadpur, Dhaka, bangladesh</p>
+              </AnimatedBox>
+
+              <AnimatedBox initialPosition="100%"
+                finalPosition="0%"
+                duration={1}
+                delay={0.2}
+                position="y"
+                isOpen={isOpen}>
+                <div className="mt-10 flex gap-5 text-primary">
                   <FaInstagram className="text-xl my-auto" />
                   <FaFacebookF className="text-xl my-auto" />
                   <FaTwitter className="text-xl my-auto" />

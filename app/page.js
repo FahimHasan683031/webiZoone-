@@ -17,7 +17,7 @@ export default function Home() {
       <FeaturedWorks />
       <About />
       <WorkingProcess />
-      <CompanyStats />
+      <CompanyStats/>
       <ClientReview />
       {/* <Newsletter /> */}
     </main>
