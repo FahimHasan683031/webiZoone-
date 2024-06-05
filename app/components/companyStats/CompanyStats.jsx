@@ -1,6 +1,6 @@
 import StatCard from "./StatCard";
 import ScrollAnimation from "../common/scrollAnimation/ScrollAnimation";
-import video from "@/public/stat-bg-video.mp4";
+import video from "@/public/webizone_it.mp4";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -60,11 +60,11 @@ const CompanyStats = () => {
     }, []);
 
     return (
-        <div className="w-full min-h-screen bg-[#B5C0C9] relative py-20 overflow-hidden">
+        <div className="w-full min-h-screen py-10 md:py-20 bg-[#B5C0C9] relative overflow-hidden">
             {/* background video for large and medium devices */}
-            <div className="absolute hidden md:flex top-20 w-full h-screen mix-blend-color-dodge opacity-80 translate-z-0  justify-center items-center">
+            <div className="absolute w-screen flex top-0 md:w-full h-full justify-center items-center">
                 <video
-                    className="w-1/2 rounded-full h-full object-cover z-0"
+                    className="w-full h-full object-cover z-0"
                     src={video}
                     autoPlay
                     muted
@@ -97,7 +97,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={1.2}
+                        delay={2.8}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
@@ -116,14 +116,14 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={1.3}
+                        delay={2.9}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
                     >
                         <StatCard
                             title={"Years of Services"}
-                            numbers={"4+"}
+                            numbers={"2+"}
                             index={2}
                         ></StatCard>
                     </ScrollAnimation>
@@ -135,14 +135,14 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={1.3}
+                        delay={2.9}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
                     >
                         <StatCard
                             title={"Location"}
-                            numbers={"3"}
+                            numbers={"1"}
                             index={3}
                         ></StatCard>
                     </ScrollAnimation>
@@ -154,14 +154,14 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={1.3}
+                        delay={2.9}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
                     >
                         <StatCard
                             title={"Team members"}
-                            numbers={"40+"}
+                            numbers={"30+"}
                             index={4}
                         ></StatCard>
                     </ScrollAnimation>
@@ -173,7 +173,7 @@ const CompanyStats = () => {
                         initialOpacity={1}
                         finalOpacity={1}
                         duration={1}
-                        delay={1.2}
+                        delay={2.8}
                         position="x"
                         once={false}
                         toggleActions={"play reverse play reverse"}
