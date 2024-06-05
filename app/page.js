@@ -15,9 +15,9 @@ export default function Home() {
       <Services />
       <FeaturedWorks />
       <About />
+      <WorkingProcess />
       <Newsletter />
       <ClientReview />
-      <WorkingProcess />
     </main>
   );
 }

@@ -11,7 +11,7 @@ const TimelineItem = ({ title, description, index, isScrollUp }) => (
   <div className="relative">
     <FaRegCircle
       className={`absolute left-[48.5%] md:left-[49.2%] top-10 md:top-[70px] bg-white ${
-        isScrollUp ? "text-blue-500" : "text-red-500"
+        isScrollUp ? "text-[#c21a80]" : "text-[#c21a80]"
       }`}
     />
     <div className="grid grid-cols-2 gap-16 md:gap-32 lg:gap-40 pt-8 md:pt-16">
@@ -92,62 +92,68 @@ const WorkingProcess = () => {
 
   const timelineData = [
     {
-      title: "Immerse",
+      title: "Business Strategy",
       description:
-        "This is where the exertion and proper planning happens and our team will gather inspiration.",
+        "Business Goals, Mission, Target market, Value proposition, SWOT analysis, Business, Model canvas.",
+    },
+    {
+      title: "Research",
+      description:
+        "Competitive Analysis, User Interviews, Journey Mapping, Value Proposition.",
+    },
+    {
+      title: "Define",
+      description:
+        "UX Strategy, Information Architecture, User Flows, Visual Direction.",
     },
     {
       title: "Plan",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia.",
+        "Scope breakdown activities, project brief, team allocation, and project kickoff.",
     },
     {
       title: "Create",
       description:
-        "This is where the exertion and proper planning happens and our team will gather inspiration.",
+        "This is where the exertion and proper planning happens and our team will gather inspiration to create an incredible product for you!",
+    },
+    {
+      title: "Evaluate",
+      description:
+        "Usability Testing, User Surveys",
     },
     {
       title: "Launch",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia.",
-    },
-    {
-      title: "Iterate",
-      description:
-        "This is where the exertion and proper planning happens and our team will gather inspiration.",
+        "Final deliverable with documentation and project closure activities.",
     },
   ];
 
   return (
     <>
-      <div className="relative px-5 max-w-screen-lg mx-auto">
-        <div className="w-[3.5px] bg-[#bc4a32] h-[22px] absolute -top-6 left-[50%]"></div>
+      <div className="relative px-5 max-w-screen-lg mx-auto mt-32">
+        <div className="w-[3.5px] bg-[#c21a80] h-[22px] absolute -top-6 left-[50%]"></div>
         <div className="grid grid-cols-3 ">
           <FaGgCircle className="text-xl md:text-3xl " />
           <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-slate-800 text-center">
             Our Process
           </h3>
           <div className="text-right">
-            <button className="px-2 md:px-4 py-2 rounded-full bg-[#bc4a32] text-white text-xs md:text-sm">
+            <button className="px-2 md:px-4 py-2 rounded-full bg-gradient-to-r from-[#322047] to-[#c21a80] text-white text-xs md:text-sm">
               GET A QUOTE
             </button>
           </div>
         </div>
         <p className="text-center w-full md:w-4/5 mx-auto mt-7 mb-9 text-[15px] lg:text-base ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem. Veritatis
+        At the heart of our operations lies a comprehensive business strategy. We start with extensive research and clear definition of objectives, meticulously planning each step. Through iterative creation, evaluation, and refinement, we ensure a flawless launch of our products or services, setting the stage for success in the market.
         </p>
       </div>
 
-      <div className="h-[500px] md:h-[650px] lg:h-[750px] max-w-screen-md mx-auto mb-10 mt-12 px-5 lg:px-0">
+      <div className="h-[630px] md:h-[790px] lg:h-[950px] max-w-screen-md mx-auto mb-10 mt-12 px-5 lg:px-0">
         <section ref={timelineRef}>
           <div className="relative">
-          <div className="w-[3.5px] bg-gray-300 h-[440px] md:h-[580px] lg:h-[630px] absolute  left-[50%]"></div>
+          <div className="w-[3.5px] bg-gray-300 h-[620px] md:h-[770px] lg:h-[860px] absolute  left-[50%]"></div>
             <motion.div
-              className="vertical-line w-[3.5px] bg-[#bc4a32] absolute top-0 left-[50%]"
+              className="vertical-line w-[3.5px] bg-[#c21a80] absolute top-0 left-[50%]"
               initial={{ height: 0 }}
               animate={controls}
             />
